@@ -1,0 +1,30 @@
+server:
+  port: 7020
+
+spring:
+  application:
+    name: batch-worker
+
+  datasource:
+    url: "jdbc:h2:mem:workerdb"
+    username: sa
+#  sql:
+#    init:
+#      schema-locations:
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+  rabbitmq:
+    addresses: localhost
+    port: 5672
+
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+
+  batch:
+    jdbc:
+      initialize-schema: EMBEDDED
