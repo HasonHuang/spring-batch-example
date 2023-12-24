@@ -20,11 +20,6 @@ spring:
     addresses: localhost
     port: 5672
 
-  cloud:
-    nacos:
-      discovery:
-        server-addr: localhost:8848
-
   batch:
     jdbc:
       initialize-schema: EMBEDDED
